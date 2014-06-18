@@ -1,4 +1,4 @@
-@mixin borderBox {
+.borderBox {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -9,7 +9,7 @@ body.layout {
 	canvas { -ms-touch-action: double-tap-zoom; }
 
 	*, body, img, embed, object, video, iframe {
-		@include borderBox;	
+		.borderBox;	
 	}
 	
 	/* @group NINJA MOVE */

@@ -3,7 +3,7 @@ body.navbar {
 	/* ================================================================= */
 	/*				headerNav Icon Image				 				*/
 	/* =============================================================== */
-	$headerNavIcon:	url(menu_icon.gif);
+	@headerNavIcon:	url(menu_icon.gif);
 	
 	/* ================================================================= */
 	/*				1st lvl menu				 						*/
@@ -21,7 +21,7 @@ body.navbar {
 					
 					&:hover { 
 						color: white;
-						background-color: $baseColorDark;
+						background-color: @baseColorDark;
 					}
 				}
 			}
@@ -42,7 +42,7 @@ body.navbar {
 			width: 0;
 			li a { 
 				min-width: 12em;
-				background-color: $baseColorLighter;
+				background-color: @baseColorLighter;
 			}
 		}
 	}
@@ -66,7 +66,7 @@ body.navbar {
 		position: fixed;							/* place nav at top of window */
 		top: 0;
 		left: 0;
-		background-color: $baseColorLighter;		/* default color / style of nav */
+		background-color: @baseColorLighter;		/* default color / style of nav */
 			
 		ul {
 			li {
@@ -86,7 +86,7 @@ body.navbar {
 					position: relative;
 					left: 5em;
 					top: -2.5em; 
-					background-color: $baseColorLight;
+					background-color: @baseColorLight;
 				} 					
 				
 			} /* /li*/
@@ -100,7 +100,7 @@ body.navbar {
 			
 			&:before {
 				content: "\0020";
-				background-image: $headerNavIcon;
+				background-image: @headerNavIcon;
 				background-size: 34px;
 				background-repeat: no-repeat;
 				background-position: center center;
@@ -108,7 +108,7 @@ body.navbar {
 				width: 64px;		
 				display: inline-table;
 				padding: 0.25em 0.5em;				/* move button from corner */
-				background-color: $baseColorLighter;		
+				background-color: @baseColorLighter;		
 			} /* /ul:before */
 	
 		} /* /ul */		
