@@ -1,11 +1,91 @@
-/* ================================================================= */
-/*				@breakpoint				 							*/
-/* =============================================================== */
+// breakpoint
 @at_desktop: 60em;
 
+// Desktop Breakpoint Recipes
+@media screen and (min-width: @at_desktop ) {
 
+	body.desktop-layout {
+	
+			// Layout
+			.full, .large, .xlarge, .med, .small, .xsmall { float: left; }
+			
+			.full		{ width: @full }
+			.large		{ width: @gld10 }
+			.xlarge		{ width: @full - (@gld7 + @gld7) }
+			.med		{ width: @gld9 }
+			.small		{ width: @gld8 }	
+			.xsmall		{ width: @gld7 }
+			
+			body {
+				margin-top: 0;
+			}
+			
+			// Typography
+			h1 { font-size: @h1; }
+			h2 { font-size: @h2; }
+			h3 { font-size: @h3; }
+			h4 { font-size: @h4; }
+			h5 { font-size: @h5; }
+			h6 { font-size: @h6; }
+			
+			// Images
+			img.left, .alignleft {
+				margin: @gld1 @gld4 @gld1 @gld1;
+				float: left;
+			}
+			img.right, .alignright {
+				margin: @gld1 @gld2 @gld1 @gld5; 
+				float: right;
+			}
+			
+			// Columns
+			.columns2, .columns3, .columns4  {
+				width: @full;
+				div, .column { 
+					float: left;
+					margin-right: @gld5;
+				}
+				p { text-align: left; }
+			}
+		
+			.columns2 div { width: @lineHeight / 4; }
+			.columns3 div { width: @lineHeight / 6; }
+			.columns4 div { width: @lineHeight / 9; }	
+	}
+}
 
-/*Ingredients*/
+@media screen and (min-width: @at_desktop ) {
+
+	body.desktop-nav {
+
+		header nav, footer nav {
+			// place nav at top of window
+			position: static;
+			ul {	
+				li {
+					// Vertical Nav
+					float: left;
+					text-indent: 0;							
+					margin-top: 0;	
+					
+					ul li a {	// Show 2nd lvl nav 
+						background-color: @baseColorLighter;
+						position: static;
+					}
+																		
+				}
+				
+				&:before {
+					display: none;
+				}
+			
+			}
+		}
+	
+	}
+}
+
+// Ingredients
 @import "ingredients/algorithm.less";
 
 body { margin-top: @gld7; }
@@ -34,13 +114,13 @@ section, hr {
 	#test9 { width: @gld9 }
 	#test10 { width: @gld10 }
 	#test11 { width: @base }
-} /* #gld_units */
+}
 
 .tdright { border-right: 2px dashed gray }
 
 #code_type {
 	h1, h2, h3, h4, h5, h6 {
-		line-height: @lineHeight;
+		.lineHeight;
 	}
 	margin-bottom: @gld6;
 }
@@ -63,7 +143,7 @@ section, hr {
 code {
 	background-color: @baseColorLighter;
 	padding: @gld4;
-	line-height: @lineHeight;
+	.lineHeight;
 	display: inline-block;
 	border: 1px solid @baseColorLight;
 	margin-bottom: @gld4;
@@ -73,5 +153,35 @@ code {
 	body {
 		margin-top: 0;
 	}
+}
 
+blockquote {
+	font-style: italic;
+	width: @full;
+	margin: @gld4 0;
+	padding: @gld4 @gld5;
+	line-height: 1.45;
+	position: relative;
+	color: @baseColor;
+}
+
+blockquote:before {
+	display: block;
+	content: "\201C";
+	font-size: @h1;
+	position: absolute;
+	left: -1 * @gld4;
+	top: -1 * @gld4;
+	color: @baseColorDark;
+}
+
+blockquote cite {
+	color: @baseColor;
+	font-weight: bold;
+	display: block;
+	margin-top: 5px;
+}
+
+blockquote cite:before {
+	content: "\2014 \2009";
 }

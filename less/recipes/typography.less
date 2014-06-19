@@ -1,10 +1,12 @@
+@sans:	"Avenir Next", Verdana, sans-serif;
+@serif: "Georgia", serif;
+
 .hyphens {
 	-webkit-hyphens: auto; 
 	-moz-hyphens: auto; 
 	hyphens: auto;
 }
-/* =========================================================== */
-/* =========================================================== */
+
 body.type {
 	.hyphens;
 	word-wrap: break-word;
@@ -15,7 +17,7 @@ body.type {
 	
 	h1, h2, h3, h4, h5, h6 {
 		font-size: @h4+@gld9;
-		line-height: @lineHeight;
+		.lineHeight;
 	}
 	
 	h1 { 
@@ -23,7 +25,7 @@ body.type {
 	}
 	
 	p, li, dt, dd, table, form { 
-		line-height: @lineHeight;
+		.lineHeight;
 		font-weight: normal;
 		font-size: @h4;
 	}
@@ -35,12 +37,10 @@ body.type {
 	
 	h5, h6, em, strong { letter-spacing: 1px }
 	
-	/* no list style for ul or ol */
+	// no list style for ul or ol
 	.unstyle { list-style: none }
 	
-	/*-----------------------------*/
-	
-	/*First Header item, lines up for grid*/
+	// First Header item, lines up for grid
 	.large, .xlarge, .med, .small, .xsmall {
 		h1, h2, h3, h4, h5, h6 {
 			&:first-child { position: relative; }
@@ -50,23 +50,20 @@ body.type {
 			&:first-child { top: 2rem; }
 		} 
 		
-		/*-----------------------------*/
 		h1:first-child  { 
-			line-height: ( @lineHeight / (@gld10) )/2;
+			.lineHeight( @gld10 , 2 );
 			top: 0;
 		}
 		h2:first-child { 
-			line-height: ( @lineHeight / (@gld9) )/2;
+			.lineHeight( @gld9 , 2 );
 			top: 1rem;
 		}
 		h3:first-child  { 
-			line-height: ( @lineHeight / (@gld8) )/2;
+			.lineHeight( @gld8 , 2 );
 			top: 1.5rem;
 		}
-		h4:first-child { line-height: ( @lineHeight / (@gld7) )/1.55; }
-		h5:first-child { line-height: ( @lineHeight / (@gld6) )/1.7; }
-		h6:first-child { line-height: ( @lineHeight / (@gld5) )/2.2; }
+		h4:first-child { .lineHeight( @gld7 , 1.55 ); }
+		h5:first-child { .lineHeight( @gld6 , 1.7 ); }
+		h6:first-child { .lineHeight( @gld5 , 2.2 ); }
 	}
-	
-} /*  |---------------|END type |---------------|  */
-
+}

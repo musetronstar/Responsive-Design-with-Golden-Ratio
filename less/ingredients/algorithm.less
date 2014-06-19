@@ -1,38 +1,40 @@
-	@sans:	"Avenir Next", Verdana, sans-serif;
-	@serif: "Georgia", serif;			
 /* Golden Ratio 1.618 */
-	@golden:	1.618;
-	
-	@base: 		100%;						
-	@gld10:		@base / @golden;			
-	@gld9:		@base - @gld10;
-	@gld8:		@gld9 / @golden;
-	@gld7:		@gld9 - @gld8;
-	@gld6:		@gld7 / @golden;
-	@gld5:		@gld7 - @gld6;
-	@gld4:		@gld5 / @golden;
-	@gld3:		@gld5 - @gld4;
-	@gld2:		@gld3 / @golden;			
-	@gld1:		@gld3 - @gld2;
-	
-	@full:		@base;
-					
-/* -----------------------------  */
+@golden:	(1 + sqrt(5)) / 2;
+
+@base: 		100%;						
+@gld10:		@base / @golden;			
+@gld9:		@base - @gld10;
+@gld8:		@gld9 / @golden;
+@gld7:		@gld9 - @gld8;
+@gld6:		@gld7 / @golden;
+@gld5:		@gld7 - @gld6;
+@gld4:		@gld5 / @golden;
+@gld3:		@gld5 - @gld4;
+@gld2:		@gld3 / @golden;			
+@gld1:		@gld3 - @gld2;
+
+@full:		@base;
+				
 /* Color Scheme */
-	@baseColor: 			gray; 	/* Base Color for Design */
-	@baseColorLighter:		lighten(@baseColor, @gld9);
-	@baseColorLight:		lighten(@baseColor, @gld7);
-	@baseColorDark:			darken(@baseColor, @gld7);
-	@baseColorDarker:		darken(@baseColor, @gld9);
-	
-/* -----------------------------  */	
+@baseColor: 			gray; 	/* Base Color for Design */
+@baseColorLighter:		lighten(@baseColor, @gld9);
+@baseColorLight:		lighten(@baseColor, @gld7);
+@baseColorDark:			darken(@baseColor, @gld7);
+@baseColorDarker:		darken(@baseColor, @gld9);
+
 /* Typography size */
-	@h1: @gld5 * 100;
-	@h2: @gld4 * 100;
-	@h3: @gld3 * 100;
-	@h4: @base;
-	@h5: @gld2 * (100 / 2);
-	@h6: @gld1 * (100 / 2);
-	
+@h1: @gld5 * 100;
+@h2: @gld4 * 100;
+@h3: @gld3 * 100;
+@h4: @base;
+@h5: @gld2 * (100 / 2);
+@h6: @gld1 * (100 / 2);
+
 /* Typography metrics & leading */
-	@lineHeight: @base * @golden;
+@lineHeight: @base * @golden;
+.lineHeight() {
+	line-height: @lineHeight;
+}
+.lineHeight(@a, @b) {
+	line-height: unit( (@lineHeight / @a) / @b );
+}

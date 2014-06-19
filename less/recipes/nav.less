@@ -1,13 +1,9 @@
 body.navbar {
 	
-	/* ================================================================= */
-	/*				headerNav Icon Image				 				*/
-	/* =============================================================== */
+	// headerNav Icon Image
 	@headerNavIcon:	url(menu_icon.gif);
 	
-	/* ================================================================= */
-	/*				1st lvl menu				 						*/
-	/* =============================================================== */
+	// 1st lvl menu
 	nav {
 		z-index: 99;	
 		ul {
@@ -27,9 +23,8 @@ body.navbar {
 			}
 		}	
 	}
-	/* ================================================================= */
-	/*				2rd lvl menu				 						*/
-	/* =============================================================== */
+
+	// 2rd lvl menu
 	nav ul li {
 		&:hover ul {
 			z-index: 99;
@@ -46,9 +41,8 @@ body.navbar {
 			}
 		}
 	}
-	/* ================================================================= */
-	/*				3rd lvl menu				 						*/
-	/* =============================================================== */
+
+	// 3rd lvl menu
 	nav ul li:hover ul li {
 		ul { display: none; }
 			
@@ -59,20 +53,19 @@ body.navbar {
 			left: 5em;
 		} 
 	}	
-	/* ================================================================= */
-	/*				Header Nav Bar				 						*/
-	/* =============================================================== */
+
+	// Header Nav Bar
 	header nav {
-		position: fixed;							/* place nav at top of window */
+		position: fixed;						// place nav at top of window
 		top: 0;
 		left: 0;
-		background-color: @baseColorLighter;		/* default color / style of nav */
+		background-color: @baseColorLighter;	// default color / style of nav
 			
 		ul {
 			li {
-				float: none;						/* Vertical Nav */
+				float: none;					// Vertical Nav
 				
-				/*hide the nav bar*/
+				// hide the nav bar
 				text-indent: -9999px;							
 				margin-top: -75%;
 				white-space: nowrap;
@@ -81,7 +74,7 @@ body.navbar {
 					display:none;
 				}
 				
-				/* 2nd lvl nav */
+				// 2nd lvl nav
 				ul li a{
 					position: relative;
 					left: 5em;
@@ -89,9 +82,9 @@ body.navbar {
 					background-color: @baseColorLight;
 				} 					
 				
-			} /* /li*/
+			}
 			
-			/*show the nav bar*/
+			// show the nav bar
 			&:hover li{
 				text-indent: 0;
 				margin-top: 0;
@@ -107,12 +100,9 @@ body.navbar {
 				height: 64px;
 				width: 64px;		
 				display: inline-table;
-				padding: 0.25em 0.5em;				/* move button from corner */
+				padding: 0.25em 0.5em;			// move button from corner
 				background-color: @baseColorLighter;		
-			} /* /ul:before */
-	
-		} /* /ul */		
-		
-	} /* /header nav */
-		
-} /*  |---------------|END Navbar |---------------|  */
+			}
+		}
+	}
+}

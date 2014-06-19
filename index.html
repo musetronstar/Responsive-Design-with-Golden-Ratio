@@ -12,7 +12,7 @@
 	<title>Responsive Design with Golden Ratio</title>
 	
 	<link rel="stylesheet" href="css/gld.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/this_site.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/site.css" type="text/css" media="all">
 
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>	
@@ -45,12 +45,13 @@
 		<li><a href="#class_link">Class Names</a></li>
 		<li><a href="#unit_link">Unit System</a></li>		
 		<li><a href="#element_link">Element Examples</a></li>
-		<li><a href="https://github.com/etchedprints/Responsive-Design-with-Golden-Ratio">GitHub</a></li>
-		<li><a href="https://github.com/etchedprints/Responsive-Design-with-Golden-Ratio/archive/master.zip">Download Link</a></li>	
 	</ul>
 </nav>					
 </header>	
 	<section>
+	<article class="full columns2">
+		<h4>This is a Less CSS port of the <a href="https://github.com/etchedprints/Responsive-Design-with-Golden-Ratio">excellent SCSS original</a> by Chad Lindemann.</h4>
+	</article>
 	<article class="full columns2">
 		<h3>A New Responsive Framework &amp; Measurement System &ndash; Found in Antiquity</h3>
 		<p>
@@ -59,13 +60,14 @@
 		<h2 id="ratio_link">Ratio &#966; 1 : 1.618</h2>
 		<img src="example_images/full_image.jpg" alt="image" />
 		<div>
-			<p >Why is this an issue? <a href="#0">Because</a> of the ever-growing list of different browsers and devices for viewing web content. The most common solutions are to create multiple css files, make conditional alternatives for different browsers, or construct a plethora of @media steps within a single design. The end result is an ever-growing infrastructure that is hard to maintain. Perhaps a new unit of measurement is needed for a ratio driven responsive design? Not found in the newest iPad or mobile device pixel density, but instead, in nature, Greek architecture, and art history.</p>
-		
-			<p>My background is in fine art, focusing on intaglio printmaking. In printmaking, you learn that removing variables and problem solving is critical in successful work. Something can go awry at any step along the way, but the joy of printmaking is its challenge, uncertainty, and the process. Web design is very similar due to the changeability of content and the uncertainty of browsers and hardware. One needs to master code, design, and esthetics. All of these challenges can make any web design project overwhelming. I once received a piece of advice from a great printmaking professor I had in undergrad school. He said, “There are only three things you can do in any piece; add complexity, simplify, or incubate it and come back to it at a later time.” Nothing more, nothing less. It makes any job more manageable.</p>
+			<p>Why is this an issue? <a href="#0">Because</a> of the ever-growing list of different browsers and devices for viewing web content. The most common solutions are to create multiple css files, make conditional alternatives for different browsers, or construct a plethora of @media steps within a single design. The end result is an ever-growing infrastructure that is hard to maintain. Perhaps a new unit of measurement is needed for a ratio driven responsive design? Not found in the newest iPad or mobile device pixel density, but instead, in nature, Greek architecture, and art history.</p>
+			<blockquote>My background is in fine art, focusing on intaglio printmaking. In printmaking, you learn that removing variables and problem solving is critical in successful work. Something can go awry at any step along the way, but the joy of printmaking is its challenge, uncertainty, and the process. Web design is very similar due to the changeability of content and the uncertainty of browsers and hardware. One needs to master code, design, and esthetics. All of these challenges can make any web design project overwhelming. I once received a piece of advice from a great printmaking professor I had in undergrad school. He said, “There are only three things you can do in any piece; add complexity, simplify, or incubate it and come back to it at a later time.” Nothing more, nothing less. It makes any job more manageable.</blockquote>
 		</div>
 		<div>	
-		
-			<p>After some incubation and simplification of the need for a more ratio driven responsive unit of measurement, I drew up my notion using the golden ratio from antiquity. Starting with a 900 pixel width, I multiplied it with the golden number 0.618. This gave me the number 556. I then took 900 and subtracted 556 to get a width dimension of 344. After that, rinse and repeat.</p>
+			<blockquote>
+			After some incubation and simplification of the need for a more ratio driven responsive unit of measurement, I drew up my notion using the golden ratio from antiquity. Starting with a 900 pixel width, I multiplied it with the golden number 0.618. This gave me the number 556. I then took 900 and subtracted 556 to get a width dimension of 344. After that, rinse and repeat.
+				<cite>Chad Lindemann</cite>
+			</blockquote>
 			<img src="example_images/first_idea_image_web.png" alt="first idea image" />
 			<p><em>example: first draft sketch</em></p>
 		</div><!--.columns2-->
@@ -83,83 +85,83 @@
 	<aside class="large">
 		<h3>However</h3>
 		<img src="example_images/golden_logo.png" alt="golden ratio class names example" class="left"/>
-		<p>Using 1:1.618 for all design decisions isn’t that user friendly, and a calculator becomes necessary for all measurement needs. But, new dynamic stylesheet languages like SCSS “which stands for Sassy CSS,” makes the creating of new units of measurement possible; giving designers the power to create their own variable families, with the purpose of creating a full measurement system. My unit system “$gld” has a total of 10 options. The “$gld” system is based on a 1:1.618 ratio and similar to the Fibonacci numbers. This 10 unit system starts with $gld1 being the smallest and $gld10 the largest. Here is a visualization of the golden units and their responsive nature.</p>
+		<p>Using 1:1.618 for all design decisions isn’t that user friendly, and a calculator becomes necessary for all measurement needs. But, new dynamic stylesheet languages like Less CSS makes the creating of new units of measurement possible; giving designers the power to create their own variable families, with the purpose of creating a full measurement system. In this unit system, “@gld” has a total of 10 options. The “@gld” system is based on a 1:1.618 ratio and similar to the Fibonacci numbers. This 10 unit system starts with @gld1 being the smallest and @gld10 the largest. Here is a visualization of the golden units and their responsive nature.</p>
 	</aside>
 </section>	
 	<section>
 	<article class="full">			
 		<h3 id="unit_link">Golden Ratio &#966; unit system</h3>
-		<p>$gld1 throught $gld10</p>
+		<p>@gld1 throught @gld10</p>
 		<dl id="gld_units">
-			<dt>$gld1</dt>
+			<dt>@gld1</dt>
 			<dd id="test1" class="boxtest">&nbsp;</dd>
-			<dt>$gld2</dt>
+			<dt>@gld2</dt>
 			<dd id="test2" class="boxtest">&nbsp;</dd>
-			<dt>$gld3</dt>
+			<dt>@gld3</dt>
 			<dd id="test3" class="boxtest">&nbsp;</dd>
-			<dt>$gld4</dt>
+			<dt>@gld4</dt>
 			<dd id="test4" class="boxtest">&nbsp;</dd>
-			<dt>$gld5</dt>
+			<dt>@gld5</dt>
 			<dd id="test5" class="boxtest">&nbsp;</dd>
-			<dt>$gld6</dt>
+			<dt>@gld6</dt>
 			<dd id="test6" class="boxtest">&nbsp;</dd>
-			<dt>$gld7</dt>
+			<dt>@gld7</dt>
 			<dd id="test7" class="boxtest">&nbsp;</dd>
-			<dt>$gld8</dt>
+			<dt>@gld8</dt>
 			<dd id="test8" class="boxtest">&nbsp;</dd>		
-			<dt>$gld9</dt>
+			<dt>@gld9</dt>
 			<dd id="test9" class="boxtest">&nbsp;</dd>
-			<dt>$gld10</dt>
+			<dt>@gld10</dt>
 			<dd id="test10" class="boxtest">&nbsp;</dd>
-			<dt>$base</dt>
+			<dt>@base</dt>
 			<dd id="test11" class="boxtest">&nbsp;</dd>
 		</dl>				
 	</article>
 </section>	
 	<section>
 	<article class="large">
-		<h2>SCSS Algorithm</h2>
+		<h2>Less Algorithm</h2>
 		<table>
 			<caption>/* Golden Ratio 1.618 */</caption>
 			<thead>
 				<tr>
-					<th>$golden:</th><th>1.618;</th>
+					<th>@golden:</th><th>1.618;</th>
 				</tr>
 				
 			</thead>
 			<tbody>
 				<tr>
-					<td>$base:</td><td>100%;</td>
+					<td>@base:</td><td>100%;</td>
 				</tr>
 				<tr>
-					<td>$gld10:</td><td>$base / $golden;</td>
+					<td>@gld10:</td><td>@base / @golden;</td>
 				</tr>
 				<tr>
-					<td>$gld9:</td><td>$base - $gld10;</td>
+					<td>@gld9:</td><td>@base - @gld10;</td>
 				</tr>
 				<tr>
-					<td>$gld8:</td><td>$gld9 / $golden;</td>
+					<td>@gld8:</td><td>@gld9 / @golden;</td>
 				</tr>
 				<tr>
-					<td>$gld7:</td><td>$gld9 - $gld8;</td>
+					<td>@gld7:</td><td>@gld9 - @gld8;</td>
 				</tr>
 				<tr>
-					<td>$gld6:</td><td>$gld7 / $golden;</td>
+					<td>@gld6:</td><td>@gld7 / @golden;</td>
 				</tr>
 				<tr>
-					<td>$gld5:</td><td>$gld7 - $gld6;</td>
+					<td>@gld5:</td><td>@gld7 - @gld6;</td>
 				</tr>
 				<tr>
-					<td>$gld4:</td><td>$gld5 / $golden;</td>
+					<td>@gld4:</td><td>@gld5 / @golden;</td>
 				</tr>
 				<tr>
-					<td>$gld3:</td><td>$gld5 - $gld4;</td>
+					<td>@gld3:</td><td>@gld5 - @gld4;</td>
 				</tr>
 				<tr>
-					<td>$gld2:</td><td>$gld3 / $golden;</td>
+					<td>@gld2:</td><td>@gld3 / @golden;</td>
 				</tr>
 				<tr>
-					<td>$gld1:</td><td>$gld3 - $gld2;</td>
+					<td>@gld1:</td><td>@gld3 - @gld2;</td>
 				</tr>
 				
 			</tbody>
@@ -201,39 +203,39 @@
 	</article>	
 	<aside class="med">
 		<h2>Building</h2>
-		<p>With this new unit of measurement in-place, large golden proportional block element classes can be created. Here are the class elements I created for page layout:</p>
+		<p>With this new unit of measurement in-place, large golden proportional block element classes can be created. Here are the class elements for page layout:</p>
 		<table>
 			<caption>Building Block Classes</caption>
 			<thead>
 				<tr>
-					<th>.full</th><th>{ width: $base }</th>
+					<th>.full</th><th>{ width: @base }</th>
 				</tr>
 				
 			</thead>
 			<tbody>
 				<tr>
-					<td>.large</td><td>{ width: $gld10 }</td>
+					<td>.large</td><td>{ width: @gld10 }</td>
 				</tr>
 				<tr>
-					<td>.xlarge	</td><td>{ width: $base - ($gld7 + $gld7) }</td>
+					<td>.xlarge	</td><td>{ width: @base - (@gld7 + @gld7) }</td>
 				</tr>
 				<tr>
-					<td>.med</td><td>{ width: $gld9 }</td>
+					<td>.med</td><td>{ width: @gld9 }</td>
 				</tr>
 				<tr>
-					<td>.small</td><td>{ width: $gld8 }</td>
+					<td>.small</td><td>{ width: @gld8 }</td>
 				</tr>
 				<tr>
-					<td>.xsmall	</td><td>{ width: $gld7 }</td>
+					<td>.xsmall	</td><td>{ width: @gld7 }</td>
 				</tr>
 			</tbody>
 		</table>
 		
 		<h3>Application</h3>
-		<p>Application of this measurement system starts with declaring “$gld10”. This unit can be used for the width of a main HTML5</p>
+		<p>Application of this measurement system starts with declaring “@gld10”. This unit can be used for the width of a main HTML5</p>
 		
 		<p>For example, if you have a wrapper of 1000 pixels you will have a main size of about 618 pixels. So all that you have to add to your HTML is class= “large” to make this work.</p>
-		<p>These golden ratio columns can become the skeletal structure for almost any web design, excluding thirty-three percentage, three column layouts or twenty-five percentage, four column layouts. After wire-framing, the golden ratio units can be used for anything including font-size, padding, margins, widths, image sizes, etc. You could design a site using only these units of measurement. Because SCSS compiles to normal CSS all these “$gld” units gracefully scale to long percentages that even IE6 can understand. </p>
+		<p>These golden ratio columns can become the skeletal structure for almost any web design, excluding thirty-three percentage, three column layouts or twenty-five percentage, four column layouts. After wire-framing, the golden ratio units can be used for anything including font-size, padding, margins, widths, image sizes, etc. You could design a site using only these units of measurement. Because Less compiles to normal CSS all these “@gld” units gracefully scale to long percentages that even IE6 can understand. </p>
 	</aside>
 </section>
 	
@@ -259,14 +261,14 @@
 		<code>
 			/* PADDING / METERING SETTINGS */
 			<br />
-			.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  $gld2 $gld4; }
+			.full, header, footer, .large, .xlarge, .med, .small, .xsmall, .columns3, .columns4 { padding:  @gld2 @gld4; }
 		</code>
 	</article>
 </section>			
 	<section>
 	<article class="large">
 		<h2>Typography</h2>
-		<p>Typography size can also be declared in “$glds”. This will create font-sizes that work well together and scale appropriately for the content.</p>
+		<p>Typography size can also be declared in “@glds”. This will create font-sizes that work well together and scale appropriately for the content.</p>
 		<div id="code_type">	
 			<h1>h1 - Title</h1>
 			<h2>h2 - Story Title</h2>
@@ -280,17 +282,17 @@
 		<h3>Code</h3>
 		<p><em>example for font-size code</em></p>
 		<code>
-			h1 { @include goldenH1; }
+			h1 { font-size: @h1; }
 			<br />
-			h2 { @include goldenH2; }
+			h2 { font-size: @h2; }
 			<br />
-			h3 { @include goldenH3; }
+			h3 { font-size: @h3; }
 			<br />
-			h4 { @include goldenH4; }
+			h4 { font-size: @h4; }
 			<br />
-			h5 { @include goldenH5; }
+			h5 { font-size: @h5; }
 			<br />
-			h6 { @include goldenH6; }
+			h6 { font-size: @h6; }
 		</code>
 	</aside>
 </section>
@@ -298,32 +300,32 @@
 	<section>	
 	<article class="large" id="element_link">
 		<h2>Color Code</h2>
-		<p>Colors can also be declared in “$glds”.</p>
+		<p>Colors can also be declared in “@glds”.</p>
 		<p><em>example for monochromatic gray theme code</em></p>
 		<table>
 			<caption>Example for Color code</caption>
 			<thead>
 				<tr>
-					<th>$baseColor:</th><th>gray; /* Base Color */</th>
+					<th>@baseColor:</th><th>gray; /* Base Color */</th>
 				</tr>
 				
 			</thead>
 			<tbody>
 				<tr>
-					<td>$baseColorLighter:</td><td>lighten($baseColor, $gld9);</td>
+					<td>@baseColorLighter:</td><td>lighten(@baseColor, @gld9);</td>
 				</tr>
 				<tr>
-					<td>$baseColorLight:</td><td>lighten($baseColor, $gld7);</td>
+					<td>@baseColorLight:</td><td>lighten(@baseColor, @gld7);</td>
 				</tr>
 				<tr>
-					<td>$baseColorDark:</td><td>darken($baseColor, $gld7);</td>
+					<td>@baseColorDark:</td><td>darken(@baseColor, @gld7);</td>
 				</tr>
 				<tr>
-					<td>$baseColorDarker:</td><td>darken($baseColor, $gld9);</td>
+					<td>@baseColorDarker:</td><td>darken(@baseColor, @gld9);</td>
 				</tr>
 			</tbody>
 		</table>
-	</article>	
+	</article>
 	<aside class="med">
 		<h3>Color</h3>
 		<div id="color_text">
@@ -342,10 +344,7 @@
 	<article class="full">
 		<h2>Conclusion</h2>
 		<p>The golden unit of measurement system scales smoothly and embraces asymmetrical balance and a return to a more ancient design philosophy found in art history and nature.</p>
-		<p>Attached is a link to my GitHub repository for this golden unit design system.</p>
-		<code>GitHub: <a href="https://github.com/etchedprints/Responsive-Design-with-Golden-Ratio/archive/master.zip">DOWNLOAD LINK</a></code>
-		<p>Thank you for allowing me to share my research with you.</p>
-	
+		<p>Thank you.</p>
 	</article>
 </section>
 	<section>
